@@ -5,9 +5,9 @@ provider "azurerm" {
 }
 locals {
    example = resource.azurerm_resource_group.example
-    vnet-name = resource.azurerm_virtual_network.example.name
-    subnet-id = resource.azurerm_subnet.subnet-1.id
-    tags = var.additional_tags == null ? resource.azurerm_resource_group.example.tags : merge(var.additional_tags, resource.azurerm_resource_group.example.tags)
+    #vnet-name = resource.azurerm_virtual_network.example.name
+    #subnet-id = resource.azurerm_subnet.subnet-1.id
+    #tags = var.additional_tags == null ? resource.azurerm_resource_group.example.tags : merge(var.additional_tags, resource.azurerm_resource_group.example.tags)
 }
 resource "azurerm_resource_group" "example"{
     name = "new-example"
